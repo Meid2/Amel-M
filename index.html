@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mnet - ملابس نسائية وبناتية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Meila</h1>
+    <p>ملابس اسلامية</p>
+  </header>
+
+  <!-- Admin Panel -->
+  <section class="admin-panel">
+    <h2>لوحة التحكم بإضافة/تعديل المنتجات</h2>
+    <div class="form-group">
+      <label>اسم المنتج</label>
+      <input type="text" id="productName" placeholder="مثال: فستان زهري">
+    </div>
+    <div class="form-group">
+      <label>الفئة</label>
+      <select id="productCategory">
+        <option value="نسائي">نسائي (18–80 سنة)</option>
+        <option value="بناتي">بناتي (2–17 سنة)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>السعر (جنيه)</label>
+      <input type="number" id="productPrice" placeholder="مثال: 180" min="1">
+    </div>
+    <button class="btn" onclick="addProduct()">إضافة منتج</button>
+  </section>
+
+  <!-- Filters -->
+  <div class="filters">
+    <select id="filterCategory" onchange="applyFilters()">
+      <option value="">جميع الفئات</option>
+      <option value="نسائي">نسائي</option>
+      <option value="بناتي">بناتي</option>
+    </select>
+    <select id="filterPrice" onchange="applyFilters()">
+      <option value="">جميع الأسعار</option>
+      <option value="0-100">حتى 100 جنيه</option>
+      <option value="100-300">100 – 300 جنيه</option>
+      <option value="300+">أكثر من 300 جنيه</option>
+    </select>
+  </div>
+
+  <!-- Products Grid -->
+  <main class="products-grid" id="productsGrid">
+    <!-- سيتم ملؤه ديناميكيًا -->
+  </main>
+
+  <!-- Modal for Product Details -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p><strong>الفئة:</strong> <span id="modalCategory"></span></p>
+      <p><strong>السعر:</strong> <span id="modalPrice"></span> جنيه</p>
+      <button class="btn btn-danger" onclick="deleteProductFromModal()">حذف المنتج</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

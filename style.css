@@ -1,0 +1,199 @@
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #fdf6f9;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #e9b7d6, #c27ba0);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* === Admin Panel === */
+  .admin-panel {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #5a5a5a;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    background: #c27ba0;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #a65f8a;
+  }
+  
+  .btn-danger {
+    background: #e74c3c;
+  }
+  
+  .btn-danger:hover {
+    background: #c0392b;
+  }
+  
+  /* === Filters === */
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+  
+  .filters select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 160px;
+  }
+  
+  /* === Products Grid === */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #c27ba0;
+  }
+  
+  .product-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
+  
+  /* زر واتساب داخل كرت المنتج */
+  .whatsapp-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.8rem;
+    padding: 0.5rem;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #1da851;
+  }
+  
+  /* === Modal === */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+  }
+  
+  .modal-content {
+    background: white;
+    margin: 8% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    text-align: right;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .close-modal:hover {
+    color: #333;
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 600px) {
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+  }
