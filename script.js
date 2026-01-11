@@ -1,5 +1,5 @@
 // رقم الواتساب (بدون رموز أو مسافات، مثال: 966501234567)
-const WHATSAPP_NUMBER = '01017958426'; // ← غيّر هذا الرقم إلى رقمك الحقيقي
+const WHATSAPP_NUMBER = '+201011097388'; // ← غيّر هذا الرقم إلى رقمك الحقيقي
 
 let products = JSON.parse(localStorage.getItem('products')) || [];
 let editingId = null;
@@ -123,4 +123,5 @@ window.onclick = function(event) {
   if (event.target === modal) {
     closeModal();
   }
+
 };
